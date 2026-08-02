@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.systeminit.com/reference/public-api
+docs: https://docs.systeminit.com/how-tos/use-public-api
+summary: >-
+  Cross-cutting semantics for the System Initiative Public API (luminork). The
+  API is workspace-scoped and organized around change sets: mutations are made
+  inside a change set (an isolated proposal / digital-twin branch) and then
+  applied to HEAD, rather than mutating live infrastructure directly.
+conventions:
+  authentication:
+    style: bearer
+    detail: Authorization Bearer with a workspace-scoped API token; see authentication/system-initiative-authentication.yml
+  base_url: https://api.systeminit.com
+  content_type: application/json
+  resource_model:
+    scope: workspace
+    unit_of_change: change_set
+    detail: >-
+      Work is done against a workspace id. Changes are staged in a change set
+      (create -> add/modify components -> apply/force-apply), giving a
+      simulate-then-apply workflow over a digital twin of real infrastructure.
+    primary_resources: [change-sets, components, schemas, actions, functions, secrets]
+  idempotency:
+    supported: unknown
+    detail: >-
+      Not documented as an idempotency-key contract; the change-set model
+      provides safety via staged, reviewable proposals rather than per-request
+      idempotency keys. No Idempotency-Key header confirmed.
+  versioning:
+    scheme: none-documented
+    detail: Public API is served from api.systeminit.com; Swagger UI at /swagger-ui reflects the last deployment.
+  error_envelope:
+    detail: JSON error responses; not yet captured as a structured problem catalog (no committed OpenAPI to derive from).
+  discovery:
+    swagger_ui: https://api.systeminit.com/swagger-ui
+cross_links:
+  authentication: authentication/system-initiative-authentication.yml
+  lifecycle: lifecycle/system-initiative-lifecycle.yml
+  changelog: changelog/system-initiative-changelog.yml

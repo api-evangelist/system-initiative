@@ -1,0 +1,32 @@
+# System Initiative
+
+> System Initiative is an AI-native infrastructure automation platform. It builds an interactive digital twin of your cloud infrastructure — modeling resources as components inside reviewable change sets — so teams and AI agents can discover, simulate, and safely apply changes. It works alongside Terraform, Pulumi, and GitOps and exposes a workspace-scoped Public API plus a first-party MCP server.
+
+## Product
+- Website: https://www.systeminit.com/
+- Product overview: https://www.systeminit.com/product/
+- What is System Initiative: https://docs.systeminit.com/what-is-si
+- IaC comparison: https://docs.systeminit.com/reference/iac-comparison
+
+## API
+- Public API reference: https://docs.systeminit.com/reference/public-api
+- How to use the Public API: https://docs.systeminit.com/how-tos/use-public-api
+- Swagger UI (generated): https://api.systeminit.com/swagger-ui
+- Base URL: https://api.systeminit.com
+- Auth: `Authorization: Bearer <workspace API token>` (SI_API_TOKEN + SI_WORKSPACE_ID)
+
+## SDKs
+- JavaScript/TypeScript (npm): https://www.npmjs.com/package/system-initiative-api-client
+- Python (PyPI): https://pypi.org/project/system-initiative-api-client/
+
+## Agents / MCP
+- First-party MCP server (bundled in the AI Agent): https://github.com/systeminit/si
+
+## Docs
+- Documentation: https://docs.systeminit.com/
+- Changelog: https://docs.systeminit.com/changelog/
+- Blog: https://www.systeminit.com/blog/
+
+## Source
+- GitHub organization: https://github.com/systeminit
+- Source (systeminit/si, Apache-2.0, archived 2026-02): https://github.com/systeminit/si

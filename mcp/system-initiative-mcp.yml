@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://github.com/systeminit/si (bin/si/src/ai-agent/mcp-server)
+notes: >-
+  System Initiative ships a first-party MCP server as part of its AI Agent
+  (in the systeminit/si repo, bin/si/src/ai-agent/mcp-server). It speaks the
+  Model Context Protocol over stdio and drives the System Initiative Public
+  API (luminork) so an AI agent can model, discover, and automate
+  infrastructure inside a workspace change set. Tool list below is the set
+  observed in the repository; it is not guaranteed exhaustive.
+server:
+  name: system-initiative
+  transport: stdio
+  distribution: bundled in the `si` AI agent (github.com/systeminit/si)
+  upstream_api: https://api.systeminit.com
+tools:
+  - name: changeSetCreate
+    description: Create a new change set (isolated proposal) in a workspace.
+  - name: changeSetList
+    description: List change sets in a workspace.
+  - name: changeSetForceApply
+    description: Force-apply a change set to HEAD.
+  - name: changeSetAbandon
+    description: Abandon (discard) a change set.
+  - name: changeSetUpdateStatus
+    description: Update the status of a change set.
+  - name: componentCreate
+    description: Create a component (infrastructure resource) in a change set.
+  - name: componentGet
+    description: Get a component by id.
+  - name: componentList
+    description: List components in a change set.
+  - name: componentUpdate
+    description: Update a component's attributes.
+  - name: componentDelete
+    description: Delete a component.
+  - name: componentErase
+    description: Erase a component from the model without deleting the real resource.
+  - name: componentRestore
+    description: Restore a previously deleted component.
+  - name: componentDiscover
+    description: Discover existing real-world resources and import them as components.
+  - name: componentImport
+    description: Import an existing resource into the model as a component.
+  - name: componentEnqueueAction
+    description: Enqueue an action (create/refresh/delete) on a component.
+  - name: actionList
+    description: List queued/available actions.
+  - name: actionUpdateStatus
+    description: Update the status of an action.
+  - name: funcCreateEditGet
+    description: Create, edit, or fetch a function.
+  - name: funcRunGet
+    description: Get the result of a function run.
+  - name: execDebugFunc
+    description: Execute a function in debug mode.

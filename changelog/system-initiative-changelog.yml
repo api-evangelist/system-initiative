@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.systeminit.com/changelog/
+url: https://docs.systeminit.com/changelog/
+scheme: keep-a-changelog
+categories: [Added, Changed, Deprecated, Removed, Fixed, Security]
+notes: >-
+  System Initiative maintains a dated changelog in its docs following the
+  "Keep a Changelog" convention (Added / Changed / Deprecated / Removed /
+  Fixed / Security). The live docs page is the source of truth; individual
+  dated entries were not captured in this pass (the docs host was not
+  fetchable at run time).
+entries: []

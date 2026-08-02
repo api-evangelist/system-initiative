@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.systeminit.com/how-tos/use-public-api
+docs: https://docs.systeminit.com/reference/public-api
+summary:
+  types: [http]
+  http_scheme: bearer
+  token_model: workspace-scoped API token (personal/automation token)
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    description: >-
+      All System Initiative Public API endpoints require a workspace-scoped API
+      token, passed as `Authorization: Bearer <token>`. Tokens are minted per
+      workspace from the web application. Requests also target a specific
+      workspace id (e.g. `SI_WORKSPACE_ID`), so a token + workspace id pair
+      scopes every call.
+    sources: [https://docs.systeminit.com/how-tos/use-public-api]
+env:
+  - SI_API_TOKEN
+  - SI_WORKSPACE_ID

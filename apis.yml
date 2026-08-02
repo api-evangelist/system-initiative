@@ -1,23 +1,66 @@
 aid: system-initiative
 name: System Initiative
-description: 'System Initiative is a company surfaced as a portfolio company of amplify-partners, battery-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: developer-tools. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  System Initiative is an AI-native infrastructure automation platform. It
+  builds an interactive digital twin of your cloud infrastructure — modeling
+  every resource as a "component" inside reviewable "change sets" — so that
+  engineers and AI agents can discover, simulate, and safely apply changes to
+  production. It works alongside Terraform, Pulumi, and GitOps and can be
+  adopted incrementally. System Initiative exposes a workspace-scoped Public
+  API (the "luminork" server) with bearer-token auth, first-party Python and
+  JavaScript/TypeScript SDKs, and a first-party Model Context Protocol (MCP)
+  server so agents can model and automate infrastructure programmatically.
+  Backed by Amplify Partners and Battery Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/system-initiative/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - amplify-partners
 - battery-ventures
-x-tier: stub
+x-tier: profiled
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/systeminit.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Developer Tools
-apis: []
+- Infrastructure Automation
+- DevOps
+- Infrastructure as Code
+- AI Agents
+- Cloud
+- MCP
+apis:
+- name: System Initiative Public API
+  description: >-
+    Workspace-scoped REST API (the "luminork" server) for automating System
+    Initiative: create and apply change sets, model/discover/import components,
+    run functions, and manage actions and secrets. Bearer-token authenticated.
+  humanURL: https://docs.systeminit.com/reference/public-api
+  baseURL: https://api.systeminit.com
+  properties:
+  - type: APIReference
+    url: https://docs.systeminit.com/reference/public-api
+  - type: Swagger
+    url: https://api.systeminit.com/swagger-ui
+  - type: GettingStarted
+    url: https://docs.systeminit.com/how-tos/use-public-api
+  - type: Authentication
+    url: authentication/system-initiative-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,4 +68,45 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://systeminit.com
+  url: https://www.systeminit.com/
+- type: DeveloperPortal
+  url: https://docs.systeminit.com/
+- type: Documentation
+  url: https://docs.systeminit.com/
+- type: APIReference
+  url: https://docs.systeminit.com/reference/public-api
+- type: GettingStarted
+  url: https://docs.systeminit.com/how-tos/use-public-api
+- type: Blog
+  url: https://www.systeminit.com/blog/
+- type: ChangeLog
+  url: https://docs.systeminit.com/changelog/
+- type: ChangeLog
+  url: changelog/system-initiative-changelog.yml
+- type: GitHubOrganization
+  url: https://github.com/systeminit
+- type: SourceCode
+  url: https://github.com/systeminit/si
+- type: Authentication
+  url: authentication/system-initiative-authentication.yml
+- type: Packages
+  url: packages/system-initiative-packages.yml
+- type: SDKs
+  url: packages/system-initiative-packages.yml
+- type: MCPServer
+  url: mcp/system-initiative-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Conventions
+  url: conventions/system-initiative-conventions.yml
+- type: Lifecycle
+  url: lifecycle/system-initiative-lifecycle.yml
+- type: DataModel
+  url: data-model/system-initiative-data-model.yml
+- type: LLMsTxt
+  url: llms/system-initiative-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

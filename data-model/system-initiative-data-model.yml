@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  https://docs.systeminit.com/reference/public-api + resource surface observed
+  in the Public API test client and MCP tool set (systeminit/si)
+notes: >-
+  Light entity graph derived from the documented Public API resource model
+  (workspace-scoped, change-set-based). No committed OpenAPI was available to
+  derive field-level $ref links, so relationships reflect the documented
+  resource hierarchy rather than a spec-parsed graph.
+entities:
+  - name: Workspace
+    description: Top-level tenant; every API token and request is scoped to a workspace.
+  - name: ChangeSet
+    description: An isolated, reviewable proposal (branch) of the infrastructure model; applied to HEAD.
+  - name: Component
+    description: A modeled infrastructure resource (the digital twin of a real cloud/API resource).
+  - name: Schema
+    description: The type/definition a component is an instance of.
+  - name: Action
+    description: A queued operation (create/refresh/delete) executed against a component's real resource.
+  - name: Func
+    description: A function (attribute/qualification/action/management) attached to schemas/components.
+  - name: Secret
+    description: A stored credential used by functions to reach cloud providers/APIs.
+relationships:
+  - from: Workspace
+    to: ChangeSet
+    type: has_many
+  - from: ChangeSet
+    to: Component
+    type: has_many
+  - from: Component
+    to: Schema
+    type: belongs_to
+    via: schema
+  - from: Component
+    to: Action
+    type: has_many
+  - from: Component
+    to: Func
+    type: has_many
+  - from: Workspace
+    to: Secret
+    type: has_many
+  - from: Workspace
+    to: Schema
+    type: has_many

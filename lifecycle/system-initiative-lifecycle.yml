@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/systeminit/si
+versioning:
+  scheme: none-documented
+  detail: Public API served from api.systeminit.com; /swagger-ui reflects the last deployment.
+source_code:
+  repo: https://github.com/systeminit/si
+  license: Apache-2.0
+  archived: true
+  last_push: '2026-02-06'
+  note: >-
+    The open-source systeminit/si mono-repo was archived (last push 2026-02-06).
+    The hosted product, docs, Public API, and the published client SDKs
+    (npm/PyPI system-initiative-api-client, most recent SDK release observed
+    2026) remained available at run time. Recorded as an observed signal, not
+    a declaration that the service is retired.
+status_page: null
+deprecation:
+  policy_url: null
+  changelog: https://docs.systeminit.com/changelog/

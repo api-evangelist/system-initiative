@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: generated
+source: >-
+  Grounded in the System Initiative Public API resource model and the
+  first-party MCP tool set (github.com/systeminit/si) + docs.systeminit.com
+skills:
+  - file: system-initiative-model-and-apply.md
+    name: Model infrastructure and apply a change set
+    api: mcp/system-initiative-mcp.yml
+    operations: [changeSetCreate, componentCreate, componentUpdate, changeSetForceApply]
+  - file: system-initiative-discover-and-import.md
+    name: Discover existing infrastructure and import it
+    api: mcp/system-initiative-mcp.yml
+    operations: [changeSetCreate, componentDiscover, componentImport, componentList, actionList]
