@@ -19,6 +19,18 @@ x-backed-by:
 - battery-ventures
 x-tier: profiled
 x-tier-reason: portfolio-lead
+deliveryModel:
+  model: self-hosted
+  license: Apache-2.0
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
@@ -67,6 +79,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: IssueTracker
+  url: https://github.com/systeminit/si/issues
+- type: Releases
+  url: https://github.com/systeminit/si/releases
+- type: CodeOfConduct
+  url: https://github.com/systeminit/si/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/systeminit/si/blob/main/CONTRIBUTING.md
 - type: License
   name: Apache-2.0
   url: https://github.com/systeminit/si/blob/main/LICENSE
